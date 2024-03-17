@@ -4,20 +4,33 @@ var s2 = ["s2-1"];
 
 var allCards =[];
 
+var userID = "Guest";
 
-//點擊按鈕
 $(function() {
-	$(".btn").click(function(){
+	
+	//點擊按鈕
+	$("#get").click(function(){
+	//$(".btn").click(function(){
+		
+		$(this).prop("disabled", true);	//禁用按鈕
+		//設定1秒後可以重新使用
+		setTimeout( function(){
+			$("#get").prop("disabled", false);	
+		}, 1000);
+		
 		
 		//組合要抽的卡季
-		let temp = allCards.concat(s1);
+		let temp = allCards.concat(s1, s2);
 		
 		let cardName = getRandom(temp, temp.length);
 		showGif( cardName );
 		
-		//writeSheet("tata", cardName);
+		writeSheet(userID, cardName);
 		
 	});
+	
+	
+	
 });  
 
 
@@ -26,8 +39,8 @@ function getRandom(arr, max){
 	
 	//抽取隨機數
 	let i = parseInt( Math.random() * max );
-	console.log(i);
-	console.log( arr[i] );
+	//console.log(i);
+	//console.log( arr[i] );
 	
 	return arr[i];
 }
@@ -62,4 +75,5 @@ function writeSheet(id, cardName){
 function padTo2Digits(num) {
   return num.toString().padStart(2, '0');
 }
+
 
