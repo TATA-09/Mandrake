@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>(偽)魔蘋果花茶</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- 使用bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		
+		<script src="./js/setTime.js"></script>
+		<script src="./js/random.js"></script>
+		
+		<!-- 內容下移70px -->
+		<style>
+			body { 
+				padding-top: 70px;
+			}
+		</style>
+	</head>
+	
+	
+	<body>
+		
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="./index.html">(偽)魔蘋果花茶</a>
+					
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				
+				
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav ">
+						<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							<li><a data-toggle="tab" href="#menu1">Page 1-1</a></li>
+							<li><a href="#">Page 1-2</a></li>
+							<li><a href="#">Page 1-3</a></li>
+							</ul>
+						</li>
+						<li><a data-toggle="tab" href="#menu2">測試版抽卡</a></li>
+						<li><a href="#">Page 3</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</nav>
+		
+		
+		<div class="tab-content">
+            <div id="home" class="tab-pane fade in active" >
+				<div class="container">
+					
+					<h3>2024/03/08 測試 v0.1</h3>
+					<p>新增五位抽卡角色</p>
+					</br>
+					
+					<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action">社長-陵</a>
+					<a href="#" class="list-group-item list-group-item-action">念煙</a>
+					<a href="#" class="list-group-item list-group-item-action">曲琦</a>
+					<a href="#" class="list-group-item list-group-item-action">圖倫</a>
+					<a href="#" class="list-group-item list-group-item-action">西西</a>
+					
+					</div>
+					
+					
+				</div>
+                
+            </div>
+			
+            <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Some content in menu 1.</p>
+				
+				
+				
+            </div>
+			
+            <div id="menu2" class="tab-pane fade">
+				<div class="container">
+					
+					<h3>第一季卡片</h3>
+					<p>社長-陵、念煙、曲琦、圖倫、西西</p>
+					</br>
+					
+					<button id="a" type="button" class="btn btn-default" >抽</button>
+					</br></br>
+					
+					<img id="show" class="img-fluid invisible" style="max-width: 50%; height: auto;" alt="..." >
+					</br></br>
+					
+					<!--<img src="./img/firstep.webp" class="img-fluid " style="max-width: 90%; height: auto;" alt="..." >-->
+					</br></br>
+					
+				</div>
+            </div>
+        </div>
+		
+		
+		
+	</body>
+</html>
