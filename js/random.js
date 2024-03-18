@@ -60,15 +60,14 @@ function writeSheet(id, cardName){
 	let date = new Date();
 	let now = date.getFullYear() + "/" + padTo2Digits( date.getMonth()+1 ) + "/" + padTo2Digits( date.getDate());
 	let time = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-	console.log(date.getDay());
-	/*
+	
 	a = {
 		data: now+','+time+','+id+','+cardName,
 		sheetUrl: 'https://docs.google.com/spreadsheets/d/1WMG455yqP1HWFNysFfTDoJJTP1QhukwyX2IbDd9jUIM/edit#gid=0',
 		sheetTag: 'history'
     };
     console.log(a);
-    $.get('https://script.google.com/macros/s/AKfycbzxKU7nhN7if-6qzHdbyM8i8oWbcv1aoCiLJxfld4_-1PMGZCi9LRkFIX_tUpIaIOUA/exec', a);*/
+    $.get('https://script.google.com/macros/s/AKfycbzxKU7nhN7if-6qzHdbyM8i8oWbcv1aoCiLJxfld4_-1PMGZCi9LRkFIX_tUpIaIOUA/exec', a);
 }
 
 
