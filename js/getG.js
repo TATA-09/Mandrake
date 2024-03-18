@@ -1,11 +1,23 @@
+
 var callStop = false;
+
 
 $(function() {
 	
-	let gifElement = document.querySelector('#Niffler');
+	let hitOpen = $('#switch').checked;
+	let gif = (hitOpen)? 'Hit' : 'Niffler';
+	
+	gifElement = document.querySelector('#Niffler');
+	
+	$("#switch").click(function(){
+		hitOpen = $('#switch').is(":checked");
+		gif = (hitOpen)? 'Hit' : 'Niffler';
+		gifElement.src = "./img/"+gif+".png";
+	});
+	
 	
 	gifElement.addEventListener('click', function(){
-		gifElement.src = "./img/Niffler.gif";
+		gifElement.src = "./img/"+gif+".gif";
 		
 		if (gifElement.classList.contains('playing')) {
 			// 如果當前處於播放狀態，就停止動畫	
@@ -19,7 +31,7 @@ $(function() {
 		
 		if(callStop == false){
 			setTimeout( function(){
-				gifElement.src = "./img/Niffler.png";
+				gifElement.src = "./img/"+gif+".png";
 				callStop = false;
 			}, 3000);
 		}
